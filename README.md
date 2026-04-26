@@ -6,7 +6,7 @@ ArgoCD-managed GitOps repository for k3s homelab cluster.
 
 - `bootstrap/` - One-time manual setup (ArgoCD install)
 - `apps/` - Helm values and config for each application
-- `argocd/` - ArgoCD Application manifests (App of Apps)
+- `argocd/` - ArgoCD Application manifests
 
 ## Bootstrap Order
 
