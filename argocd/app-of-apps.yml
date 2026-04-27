@@ -3,10 +3,12 @@ kind: Application
 metadata:
   name: app-of-apps
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: git@github.com:yourusername/k3s-gitops.git
+    repoURL: git@github.com:bweber226/k3s-gitops.git
     targetRevision: HEAD
     path: argocd
   destination:
