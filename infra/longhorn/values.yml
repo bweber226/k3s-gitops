@@ -1,0 +1,20 @@
+longhorn:
+  defaultSettings:
+    defaultReplicaCount: 2
+    storageMinimalAvailablePercentage: 10
+    nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
+
+  persistence:
+    defaultClass: true
+    defaultClassReplicaCount: 2
+
+  longhornManager:
+    nodeSelector:
+      node-role.kubernetes.io/worker: "true"
+    tolerations: []
+
+  preUpgradeChecker:
+    jobEnabled: false
+
+  ingress:
+    enabled: false
