@@ -13,6 +13,9 @@ spec:
     repoURL: git@github.com:bweber226/k3s-gitops.git
     targetRevision: HEAD
     path: infra/longhorn
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: longhorn-system
