@@ -10,9 +10,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:yourusername/k3s-gitops.git
+    repoURL: git@github.com:bweber226/k3s-gitops.git
     targetRevision: HEAD
     path: infra/cert-manager
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
